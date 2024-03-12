@@ -1,46 +1,59 @@
 import "@rainbow-me/rainbowkit/styles.css";
+import { getFrameMetadata } from 'frog/next'
 import { Metadata } from "next";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
+
+
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : `http://localhost:${process.env.PORT || 3000}`;
 const imageUrl = `${baseUrl}/thumbnail.jpg`;
 
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: "Scaffold-ETH 2 App",
-    template: "%s | Scaffold-ETH 2",
-  },
-  description: "Built with 🏗 Scaffold-ETH 2",
-  openGraph: {
+
+export async function generateMetadata(): Promise<Metadata> {
+  
+  const frameTags = await getFrameMetadata(
+    `${process.env.VERCEL_URL || 'http://localhost:3000'}/api`,
+  )
+  
+  return {
+    metadataBase: new URL(baseUrl),
     title: {
       default: "Scaffold-ETH 2 App",
       template: "%s | Scaffold-ETH 2",
     },
     description: "Built with 🏗 Scaffold-ETH 2",
-    images: [
-      {
-        url: imageUrl,
+    openGraph: {
+      title: {
+        default: "Scaffold-ETH 2 App",
+        template: "%s | Scaffold-ETH 2",
       },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: [imageUrl],
-    title: {
-      default: "Scaffold-ETH 2",
-      template: "%s | Scaffold-ETH 2",
+      description: "Built with 🏗 Scaffold-ETH 2",
+      images: [
+        {
+          url: imageUrl,
+        },
+      ],
     },
-    description: "Built with 🏗 Scaffold-ETH 2",
-  },
-  icons: {
-    icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
-  },
-};
+    twitter: {
+      card: "summary_large_image",
+      images: [imageUrl],
+      title: {
+        default: "Scaffold-ETH 2",
+        template: "%s | Scaffold-ETH 2",
+      },
+      description: "Built with 🏗 Scaffold-ETH 2",
+    },
+    icons: {
+      icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+    },
+    other: frameTags,
+  }
+}
+
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
