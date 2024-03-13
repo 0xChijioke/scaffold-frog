@@ -49,11 +49,11 @@ app.frame("/", c => {
       </div>
     ),
     intents: [
-      <TextInput placeholder="Enter custom fruit..." />,
-      <Button value="apples">Apples</Button>,
-      <Button value="oranges">Oranges</Button>,
-      <Button value="bananas">Bananas</Button>,
-      status === "response" && <Button.Reset>Reset</Button.Reset>,
+      <TextInput key="input" placeholder="Enter custom fruit..." />,
+      <Button key="apples" value="apples">Apples</Button>,
+      <Button key="oranges" value="oranges">Oranges</Button>,
+      <Button key="bananas" value="bananas">Bananas</Button>,
+      status === "response" && <Button.Reset key="reset">Reset</Button.Reset>,
     ],
   });
 });
