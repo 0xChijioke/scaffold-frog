@@ -50,9 +50,15 @@ app.frame("/", c => {
     ),
     intents: [
       <TextInput key="input" placeholder="Enter custom fruit..." />,
-      <Button key="apples" value="apples">Apples</Button>,
-      <Button key="oranges" value="oranges">Oranges</Button>,
-      <Button key="bananas" value="bananas">Bananas</Button>,
+      <Button key="apples" value="apples">
+        Apples
+      </Button>,
+      <Button key="oranges" value="oranges">
+        Oranges
+      </Button>,
+      <Button key="bananas" value="bananas">
+        Bananas
+      </Button>,
       status === "response" && <Button.Reset key="reset">Reset</Button.Reset>,
     ],
   });
