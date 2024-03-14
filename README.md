@@ -1,11 +1,15 @@
-# 🏗 Scaffold-ETH 2
+# 🏗 Scaffold-ETH 2 X 🐸Frog
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+This repo integrate frog framework into scaffold-eth 2. 
+
+**Frog**: A minimal & lightweight framework for Farcaster Frames.
+
+**Scaffole-ETH**: 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
 ⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
 
