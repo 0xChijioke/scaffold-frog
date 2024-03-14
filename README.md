@@ -5,7 +5,7 @@
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
 
-This repo integrate frog framework into scaffold-eth 2. 
+This repo integrates frog framework into scaffold-eth 2. 
 
 **Frog**: A minimal & lightweight framework for Farcaster Frames.
 
