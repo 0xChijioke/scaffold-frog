@@ -24,6 +24,16 @@ const Home: NextPage = () => {
           <p className="text-center text-lg">
             Get started by editing{" "}
             <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
+              packages/nextjs/app/api/[[...routes]]/route.tsx
+            </code>
+            <Link href={"/api/dev"} className="italic link">
+              {" "}
+              or go to frame dev tool
+            </Link>
+          </p>
+          <p className="text-center text-lg">
+            Get started by editing{" "}
+            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
               packages/nextjs/app/page.tsx
             </code>
           </p>
