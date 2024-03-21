@@ -2,7 +2,8 @@
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
+  <a href="https://scaffoldeth.io">Website</a> |
+  <a href="https://frog.fm">Frog</a>
 </h4>
 
 This repo integrates frog framework into scaffold-eth 2. 
